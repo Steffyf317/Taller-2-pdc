@@ -3,7 +3,7 @@
 ### ·Steffy Geraldine Fernández González
 ### ·Andrés Felipe Sánchez Gómez 
 ### ·Nilson Daniel Dueñas López
-
+[![Logo-Blood-Small.png](https://i.postimg.cc/2ytcCvyY/Logo-Blood-Small.png)](https://postimg.cc/QKpkbFcY)
 ## 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 #### Se desarrolló la función separar_digitos para descomponer un número entero en sus dígitos individuales. Dentro de la función, se iteró sobre el número, obteniendo el último dígito y eliminándolo en cada paso, insertando cada dígito en una lista.
 ```python
