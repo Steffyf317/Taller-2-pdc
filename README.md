@@ -4,8 +4,8 @@
 ### ·Andrés Felipe Sánchez Gómez 
 ### ·Nilson Daniel Dueñas López
 
-## 5.Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde una perpectiva tanto iterativa como recursiva. Pista: Puede ser de utilidad chequear el Algoritmo de Euclides para el cálculo del Máximo Común Divisor, y revisar cómo se relaciona este último con el Mínimo Común Múltiplo.
-### Primero, se crea una función donde se utilizan dos casos bases del algoritmo de Euclides, y es que se establece la división entre dos números (el más grande entre el pequeño), donde el residuo pasa a ser el segundo número iterativamente, con lo que se obtiene finalmente el máximo común divisor y, con este se calcula el mínimo común múltiplo:
+## 5. Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde una perpectiva tanto iterativa como recursiva. Pista: Puede ser de utilidad chequear el Algoritmo de Euclides para el cálculo del Máximo Común Divisor, y revisar cómo se relaciona este último con el Mínimo Común Múltiplo.
+#### Primero, se crea una función donde se utilizan dos casos bases del algoritmo de Euclides, y es que se establece la división entre dos números (el más grande entre el pequeño), donde el residuo pasa a ser el segundo número iterativamente, con lo que se obtiene finalmente el máximo común divisor y, con este se calcula el mínimo común múltiplo:
 ```python
 def maximo_comun_divisor (a,b)->int:
   while a > b and b != 0: #se establecen los casos bases del algoritmo de Euclides
@@ -22,8 +22,8 @@ if __name__ == "__main__":
   mcm = abs(a*b)//mcd #se calcula el mínimo común múltiplo a partir del máximo común divisor
   print("El mínimo común múltiplo de " +str(a)+ " y " +str(b)+ " es " +str(mcm))
   ```
- ## 6.Desarrollar un programa que determine si en una lista existen o no elementos repetidos. Pista: Maneje valores booleanos y utilice el operador in.
- ### Aquí básicamente se crea una lista auxiliar que guarda elementos únicos, ya que al recorrer la lista digitada por el usuario, se compara el elemento n con el n anterior, si son iguales quiere decir que si tiene elementos repetidos:
+ ## 6. Desarrollar un programa que determine si en una lista existen o no elementos repetidos. Pista: Maneje valores booleanos y utilice el operador in.
+ #### Aquí básicamente se crea una lista auxiliar que guarda elementos únicos, ya que al recorrer la lista digitada por el usuario, se compara el elemento n con el n anterior, si son iguales quiere decir que si tiene elementos repetidos:
  ```python
  def existencia_elementos_repetidos (lista):
   lista_elementos_unicos = [] #lista auxiliar
@@ -44,8 +44,8 @@ if __name__ == "__main__":
     lista.append(a) #agregar dichos elementos en la lista creada anteriormente
   print(f"La lista tiene elementos repetidos?: {existencia_elementos_repetidos(lista)}")
   ```
-## 7.Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
-### Aquí se usa una función que incorpora una lista con los valores ASCII para las vocales y asimismo, un contador de vocales, que retorna la función si el contador es mayor o igual a 2:
+## 7. Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
+#### Aquí se usa una función que incorpora una lista con los valores ASCII para las vocales y asimismo, un contador de vocales, que retorna la función si el contador es mayor o igual a 2:
 ```python
 def dos_o_mas_vocales(lista):
   vocales:int = 0 #se inicia en 0 un contador de vocales
@@ -70,8 +70,8 @@ if __name__ == "__main__":
     lista.append(a) #agregar dichos elementos en la lista creada anteriormente
   dos_o_mas_vocales(lista)
 ```
-## 8.Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
-### Básicamente lo que se hace es comparar elementos entre las dos listas con la palabra reservada 'not':
+## 8. Desarrollar un programa que dadas dos listas determine que elementos tiene la primer lista que no tenga la segunda lista.
+#### Básicamente lo que se hace es comparar elementos entre las dos listas con la palabra reservada 'not':
 ```python
 def elementos_primera_lista_no_en_segunda (lista_1,lista_2):
   for i in lista_1:
