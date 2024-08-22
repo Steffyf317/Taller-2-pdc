@@ -211,6 +211,120 @@ if __name__ == "__main__":
   print(lista_1) #se imprimen las listas para verificar
   print(lista_2)
 ```
+## 9. Escriba un programa que pida 5 números reales y calcule las siguientes operaciones:
+  + El promedio
+  + La mediana 
+  + El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+  + Ordenar los números de forma ascendente
+  + Ordenar los números de forma descendente
+  + La potencia del mayor número elevado al menor número
+  + La raíz cúbica del menor número
 
+#### Simplemente se sigio el mismo plantemamineto de cada problema con las fuinciones de vectortes, acortando las operaciones significativamente al taller 1 
+```python
+#9. 
+listNum = []
+numRef = float
 
-  
+# Pedir los 5 numeros a añadir en la lista
+for i in range(5):
+    listNum.append(float(input(("Ingrese el " + str(i+1) +" número: "))))
+
+#Promedio
+print("El promedio es: "+str(sum(listNum)/len(listNum)))
+
+#Mediana
+listNum.sort()
+print("La Mediana es :"+str(listNum[2]))
+
+#Promedio multiplicativo
+mult = 1
+for num in listNum:
+    mult *= num
+print("El Promedio multiplicativo es : "+f"{(mult**(1/len(listNum))):.4f}")
+
+#Orden
+print("El Oreden Ascendente es : "+str(listNum))
+
+#Orden reverso
+print("El Oreden Descendente : "+str(sorted(listNum,reverse=True)))
+
+#Potencia del mayor al menor
+print("Potencia del mayor al menor "+str(listNum[4])+"^"+str(listNum[0])+" es :"+str(listNum[-1]**listNum[0]))
+
+#La raíz cúbica del menor número
+print("La raíz cúbica del menor número es : "+str(listNum[0]**(1/3)))
+
+```
+## 10. Suponga que se tiene una lista A con ciertos números enteros. Desarrolle una función que, independientemente de los números que se encuentran en la lista A, tome aquellos números que son múltiplos de 3 y los guarde en una lista nueva, la cual debe ser **retornada** por la función. Implemente la perspectiva de un *patrón de acumulación* y también de *comprensión de listas*. 
+####  Con comprension de listas se creo una funcion que recorre la matriz dada y escoje solo los multiplos de 3 para retornar una nueva lista con estos multilpos
+### *El desafio consistia de hallar la manera de encontrar multiplos de 3 sin usar modulo, en la investigacion previa, la unica otra manera de encontrar estos multiplos es sumando los digitos del numero y si esos digitos sumados son multiplos de 3 el numero ortiginal sera multiplo de 3, con esto en mente no encontramos manera de no usar el modulo, dado que para hallar si la suma de los digitos es multiplo usariamos el modulo.
+```python
+#Funcion para crear una lista que solo tenga los multipos de 3
+def listMod(x):
+    listB = [i for i in x if i%3==0] #loop atraves de la matriz y solo añadir si el modulo%3 es 0
+    return listB 
+
+if __name__ == "__main__": 
+    listNum = []
+    #Pedir al cantidad de numeros a valorar
+    cantidad=int(input(("Ingrese la cantidad de numeros a valorar : ")))
+    # Pedir los numeros a añadir en la lista
+    for i in range(cantidad):
+        listNum.append(float(input(("Ingrese el " + str(i+1) +" número: "))))
+    #print con la funcion de multiplos
+    print(listMod(listNum))
+```
+### Bono
+11. Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
+### Se recorren las filas, columnas y diagonales, cada una con un ciclo de comparacion el cual se encarga de marcar si la suma es magica, la cual se evalua al final
+```python
+
+c=int(input(("Ingrese el tamaño de la matriz cuadrada a valorar: ")))
+# Pedir los numeros a añadir en la lista
+magica=[[int(input(f"Ingrese el valor para[{x}][{y}]")) for x in range (c)] for y in range(c)]
+
+print(magica)
+comparador=int=0
+comparador2=int=0
+comparadorHorizontal=int=0
+comparadorVertical=int=0
+comparadorDiagonal=int=0
+ 
+#recorre la matriz horizontalmente, usando comparadores entre ciclos para guardar informacion
+#cada ciclo comparara la suma horizontal y si esta falla se cancela el ciclo 
+for i in range(c):
+     comparador2=comparador
+     comparadorHorizontal=comparador2
+     if comparadorHorizontal!=comparador2:
+         break
+     comparador=0
+     for j in range (c):
+         comparador+=magica[i][j]
+print("Horizontalmente : "+str(comparadorHorizontal))
+#recorre la matriz verticalmente, usando comparadores entre ciclos para guardar informacion
+#cada ciclo comparara la suma y si esta falla se cancela el ciclo 
+for i in range(c):
+    comparador2=comparador
+    comparadorVertical=comparador2
+    if comparadorVertical!=comparador2:
+        break
+    comparador=0
+    for j in range (c):
+        comparador+=magica[j][i]
+print("Vertical : "+str(comparadorHorizontal))
+#recorre la matriz diagonalmente, usando comparadores entre ciclos para guardar informacion
+#cada ciclo comparara la suma y si esta falla se cancela el ciclo 
+for i in range(c):
+    comparador2=comparador
+    comparadorDiagonal=comparador2
+    if comparadorDiagonal!=comparador2:
+        break
+    comparador=0
+    for j in range (c):
+        comparador+=magica[i][i]
+print("Diagonal :"+str(comparadorDiagonal))
+#comparador de los 3 calores de las sumas, considerando que cada suma ya paso su respectivo comparador
+if comparadorDiagonal==comparadorDiagonal==comparadorHorizontal :print("Es Magica, la suma es : "+str(comparadorDiagonal)) 
+else: print("No es Magica")
+```
