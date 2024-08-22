@@ -77,7 +77,7 @@ def elementos_primera_lista_no_en_segunda (lista_1,lista_2):
   for i in lista_1:
     if i not in lista_2: #se comparan elementos entre las dos listas
       print(i)
-
+      return
   print("Todos los elementos de la primera lista están en la segunda ")
 
 if __name__ == "__main__":
