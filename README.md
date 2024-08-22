@@ -6,7 +6,7 @@
 
 ## 1. Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número. Pista: Utilice los operadores módulo (%) y división entera (//).
 #### Se desarrolló la función separar_digitos para descomponer un número entero en sus dígitos individuales. Dentro de la función, se iteró sobre el número, obteniendo el último dígito y eliminándolo en cada paso, insertando cada dígito en una lista.
-```pyhton
+```python
 def separar_digitos(n):
     digitos = []  # Lista para almacenar los dígitos
     while n > 0:
@@ -22,7 +22,7 @@ print("Los dígitos que componen el número son:", resultado)  # Muestra los dí
 
 ## 2. Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entregue los dígitos tanto de la parte entera como de la decimal.
 ####
-```pyhton
+```python
 def separar_digitos(n):
     parte_entera = int(n)  # Obtiene la parte entera del número
     parte_decimal = str(n).split('.')[1] if '.' in str(n) else ''  # Obtiene la parte decimal del número como cadena
@@ -48,7 +48,7 @@ print("Los dígitos de la parte decimal son:", digitos_decimal)
 
 ## 3. Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos, definiendo números espejos como dos números a y b tales que a se lee de izquierda a derecha igual que se lee b de derecha a izquierda, y viceversa.
 ####
-```pyhton
+```python
 def son_espejos(a, b):
     # Convierte los números a cadenas
     a_str = str(a)
@@ -70,7 +70,7 @@ else:
 
 ## 4. Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Calcule con cuántos términos de la serie (i.e: cuáles valores de n), se tienen errores del 10%, 1%, 0.1% y 0.001%.
 ####
-```pyhton
+```python
 import math
 
 def aproximacion_coseno(x, terminos):
